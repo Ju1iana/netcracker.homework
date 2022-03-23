@@ -69,7 +69,7 @@ public class Ball {
       this.xDelta = - xDelta;
    }
 
-   public void reflectVertical(){    // or visout this??
+   public void reflectVertical(){
       this.yDelta = - yDelta;
    }
 
