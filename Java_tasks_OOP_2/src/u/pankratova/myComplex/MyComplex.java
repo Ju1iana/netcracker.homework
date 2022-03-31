@@ -44,17 +44,11 @@ public class MyComplex {
     }
 
     public boolean isReal() {
-        if (Math.abs(this.real - 0.0) < EPSILON) {   // false - если не содержит действительную часть
-            return false;                           // true - если содержит действительную часть
-        }
-        return true;
+        return (Math.abs(this.real - 0.0) < EPSILON);
     }
 
     public boolean isImaginary() {
-        if (Math.abs(this.imag - 0.0) < EPSILON) {
-            return false;
-        }
-        return true;
+        return (Math.abs(this.imag - 0.0) < EPSILON);
     }
 
     public boolean equals(MyComplex another) {
