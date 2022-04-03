@@ -13,14 +13,20 @@ public class Main {
 
         /*-------Circle-------*/
         Circle circle = new Circle(5, "black");
+        Circle circle2 = new Circle(5, "black");
         System.out.println("Circle area = " + circle.calculateArea());
+        System.out.println(circle.equals(circle2));
+        System.out.println(circle.hashCode() == circle2.hashCode()); // true
         System.out.println("================================");
 
 
         /*-------Rectangle-------*/
         Rectangle rectangle = new Rectangle(5, 4);
+        Rectangle rectangle2 = new Rectangle(22, 11);
         System.out.println("Rectangle area = " + rectangle.calculateArea() + ";  " +
                 "rectangle perimeter = " + rectangle.calculatePerimeter());
+        System.out.println(rectangle.equals(rectangle2));
+        System.out.println(rectangle.hashCode() == rectangle2.hashCode()); // false
         System.out.println("================================");
 
         /*-------Employee-------*/
@@ -38,6 +44,8 @@ public class Main {
         authors[0] = new Author("AuthorOne", "authorOne@somewhere.com", 'm');
         authors[1] = new Author("AuthorTwo", "authorTwo@mail.ru", 'f');
         authors[2] = new Author("AuthorThree", "authorThree@internet.ru", 'm');
+ 
+        System.out.println(authors[0].hashCode() == authors[2].hashCode()); // false
 
         Book bookOne = new Book("SomeBook", authors, 12.4, 2);
 
@@ -68,6 +76,8 @@ public class Main {
         /*-------MyPoint -------*/
         MyPoint myPoint = new MyPoint(10,2);
         MyPoint myPoint2 = new MyPoint();
+        System.out.println(myPoint.equals(myPoint2)); // false
+        System.out.println(myPoint2.hashCode() == myPoint.hashCode()); // false
 
         System.out.println(myPoint);
         System.out.println(myPoint2);
