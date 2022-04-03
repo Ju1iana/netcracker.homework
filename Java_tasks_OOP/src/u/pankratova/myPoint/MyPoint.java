@@ -41,10 +41,6 @@ public class MyPoint {
         this.y = y;
     }
 
-    @Override
-    public String toString() {
-        return "(" + x + ", " + y + ")";
-    }
 
     // distance from this point to the given point at (x,y)
     public double distance(int x, int y) {
@@ -63,6 +59,24 @@ public class MyPoint {
     // distance from this point to (0,0)
     public double distance() {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+    }
+    
+     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyPoint myPoint = (MyPoint) o;
+        return x == myPoint.x && y == myPoint.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
     }
 
 }
