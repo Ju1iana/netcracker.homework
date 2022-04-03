@@ -2,6 +2,8 @@ package u.pankratova.figure.triangle;
 
 import u.pankratova.myPoint.MyPoint;
 
+import java.util.Objects;
+
 public class MyTriangle {
 
     private MyPoint v1;
@@ -22,14 +24,6 @@ public class MyTriangle {
     }
 
 
-    @Override
-    public String toString() {
-        return "MyTriangle:" +
-                "v1 = " + v1 +
-                ", v2 = " + v2 +
-                ", v3 = " + v3;
-    }
-
     public double getPerimeter() {
         return v1.distance(v2) + v2.distance(v3) + v3.distance(v1);
     }
@@ -49,4 +43,24 @@ public class MyTriangle {
             return " Scalene";
     }
 
+    @Override
+    public String toString() {
+        return "MyTriangle:" +
+                "v1 = " + v1 +
+                ", v2 = " + v2 +
+                ", v3 = " + v3;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyTriangle that = (MyTriangle) o;
+        return Objects.equals(v1, that.v1) && Objects.equals(v2, that.v2) && Objects.equals(v3, that.v3);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(v1, v2, v3);
+    }
 }
