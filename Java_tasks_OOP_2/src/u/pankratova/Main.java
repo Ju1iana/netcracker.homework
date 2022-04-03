@@ -17,6 +17,13 @@ public class Main {
         double [] coeffs = {8, 2};
         MyPolynomial p2 = new MyPolynomial(coeffs);
 
+        System.out.println(p1.equals(p2));  // false
+
+        MyPolynomial p3 = new MyPolynomial(coeffs);
+
+        System.out.println(p2.equals(p3)); // true
+        System.out.println(p2.hashCode() == p3.hashCode()); // true
+
         System.out.println("\n1) " + p1);  // | return is: 1) 3.0x^2 + 4.0x + 1
         System.out.println("2) " + p2);    // | return is: 2) 2.0x + 8.0
 
@@ -32,6 +39,8 @@ public class Main {
         MyComplex c1 = new MyComplex(2, 3.4);
         MyComplex c2 = new MyComplex(0, 11.9);
         MyComplex c3 = new MyComplex();
+
+        System.out.println(c1.equals(c2)); // false
 
         c3.setValue(0, 11.9);
 
@@ -63,6 +72,10 @@ public class Main {
         Ball b = null;
         Ball b2 = null;
 
+
+        // System.out.println(b.equals(b2)); // NullPointerException
+
+
         try {
             b = new Ball(35, 55, 6, 10, 30); // direction should be from [-180; 180]
             b2 = new Ball(11,9,2,4,45);
@@ -70,6 +83,7 @@ public class Main {
             System.out.println("Unable to create Ball instance: " + e.getMessage());
         }
 
+        System.out.println(b.equals(b2)); // false
         Container containerBox = new Container(0, 0, 100, 100);
 
         // Test
