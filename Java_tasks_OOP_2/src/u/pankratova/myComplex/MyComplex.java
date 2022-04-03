@@ -51,11 +51,17 @@ public class MyComplex {
         return (Math.abs(this.imag - 0.0) < EPSILON);
     }
 
+     @Override
     public boolean equals(MyComplex another) {
         if (this == another) return true;
         if (!(another instanceof MyComplex)) return false;
         MyComplex myComplex = another;
         return Double.compare(myComplex.real, real) == 0 && Double.compare(myComplex.imag, imag) == 0;
+    }
+    
+     @Override
+    public int hashCode() {
+        return Objects.hash(real, imag);
     }
 
 
