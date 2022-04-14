@@ -62,12 +62,12 @@ public class Main {
 
 /* test
 * 1)
-* ID:1 [name = Jon, passport = 78 90 8765
-* ID:2 [name = Nina, passport = 34 65 1234
-* ID:3 [name = Kim, passport = 90 07 6729
-* ID:4 [name = Lolita, passport = 67 98 0020
-* ID:5 [name = Masha, passport = 41 94 9825
-* ID:6 [name = Ben, passport = 68 00 7628
+* ID:1 [name = Jon, passport = 78 90 8765]
+* ID:2 [name = Nina, passport = 34 65 1234]
+* ID:3 [name = Kim, passport = 90 07 6729]
+* ID:4 [name = Lolita, passport = 67 98 0020]
+* ID:5 [name = Masha, passport = 41 94 9825]
+* ID:6 [name = Ben, passport = 68 00 7628]
 *
 *
 * 2)
