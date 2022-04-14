@@ -101,5 +101,8 @@ public class Car {
      *
      * You refueled. There are now 15.0 gallons in your tank.
      * 3: CarStats {13.0 miles left , gallons = 15.0/15.0}
+     * 
+     * You've driven  13.0 miles.
+     * You have arrived at your destination.
      * */
 }
