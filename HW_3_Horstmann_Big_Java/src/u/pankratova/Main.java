@@ -2,14 +2,7 @@ package u.pankratova;
 
 import u.pankratova.ch3.*;
 import u.pankratova.ch8.ComboLock;
-import u.pankratova.ch9.chess.ChessPiece;
-import u.pankratova.ch9.chess.Pawn;
-import u.pankratova.ch9.clock.Clock;
-import u.pankratova.ch9.clock.WorldClock;
-import u.pankratova.ch9.employee.Employee;
-import u.pankratova.ch9.employee.HourlyEmployee;
-import u.pankratova.ch9.employee.Manager;
-import u.pankratova.ch9.employee.SalariedEmployee;
+import u.pankratova.ch9.*;
 
 import java.util.Scanner;
 
@@ -178,20 +171,5 @@ public class Main {
         worldClock.setAlarmHours(7, 25);
         System.out.println(worldClock.getTime());
         System.out.println();
-
-
-
-        /*-ch9------ChessPiece-------*/
-
-        Pawn pawn = new Pawn("d4");
-
-
-
-
-
-
-
-
-
     }
 }
