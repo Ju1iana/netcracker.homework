@@ -244,6 +244,5 @@ public class Main {
 
         Knight knight1 = new Knight("c6");
         System.out.println("Knight1: " + knight1.canMoveTo());
-        
     }
 }
