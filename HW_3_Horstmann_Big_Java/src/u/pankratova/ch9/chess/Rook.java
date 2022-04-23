@@ -32,7 +32,6 @@ public class Rook extends ChessPiece {
             if (i != convertRowToInt(getRow())) {
                 move.add(getColumn() + (i));
         }}
-
         return move;
     }
 }
