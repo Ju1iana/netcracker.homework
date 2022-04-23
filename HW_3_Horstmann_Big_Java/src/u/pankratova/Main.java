@@ -171,5 +171,79 @@ public class Main {
         worldClock.setAlarmHours(7, 25);
         System.out.println(worldClock.getTime());
         System.out.println();
+        
+        
+        /*-ch9------ChessPiece-------*/
+
+        // Pawn
+        System.out.println("*----------------- Pawn -----------------*");
+        Pawn pawn = new Pawn("d2");
+        System.out.println("The pawn moves to: " + pawn.canMoveTo());
+
+        Pawn pawn2 = new Pawn("a5");
+        System.out.println("The pawn moves to: " + pawn2.canMoveTo());
+
+        Pawn pawn3 = new Pawn("f7");
+        System.out.println("The pawn moves to: " + pawn3.canMoveTo());
+
+        Pawn pawn4 = new Pawn("e8");
+        System.out.println("The pawn moves to: " + pawn4.canMoveTo());
+        System.out.println();
+
+        // Rook
+        System.out.println("*----------------- Rook -----------------*");
+        Rook rook = new Rook("a5");
+        System.out.println("Rook: " + rook.canMoveTo());
+
+        Rook rook2 = new Rook("g8");
+        System.out.println("Rook: " + rook2.canMoveTo());
+
+        Rook rook3 = new Rook("d3");
+        System.out.println("Rook: " + rook3.canMoveTo());
+
+        Rook rook4 = new Rook("f1");
+        System.out.println("Rook: " + rook4.canMoveTo());
+        System.out.println();
+
+        // King
+        System.out.println("*----------------- King -----------------*");
+
+        King king = new King("d4");
+        System.out.println("King: " + king.canMoveTo());
+
+        King king1 = new King("b6");
+        System.out.println("King1: " + king1.canMoveTo());
+        System.out.println();
+
+
+        // Bishop
+        System.out.println("*----------------- Bishop -----------------*");
+        Bishop bishop = new Bishop("f5");
+        System.out.println("Bishop: " + bishop.canMoveTo().stream().distinct().collect(Collectors.toList()));
+
+        Bishop bishop1 = new Bishop("b7");
+        System.out.println("Bishop1: " + bishop1.canMoveTo().stream().distinct().collect(Collectors.toList()));
+
+        Bishop bishop2 = new Bishop("h8");
+        System.out.println("Bishop2: " + bishop2.canMoveTo().stream().distinct().collect(Collectors.toList()));
+
+
+        // Queen
+        System.out.println("*----------------- Queen -----------------*");
+        Queen queen = new Queen("e3");
+        System.out.println("Queen: " + queen.canMoveTo());
+
+        Queen queen1 = new Queen("g8");
+        System.out.println("Queen1: " + queen1.canMoveTo());
+
+
+        // Knight
+        System.out.println("*----------------- Knight -----------------*");
+        Knight knight = new Knight("d4");
+        System.out.println("Knight: " + knight.canMoveTo());
+
+        Knight knight1 = new Knight("c6");
+        System.out.println("Knight1: " + knight1.canMoveTo());
+        
     }
 }
