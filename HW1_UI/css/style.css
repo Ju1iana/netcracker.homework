@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: lightgrey;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.resume_wrapper{
+    display: flex;
+    width: 850px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 10px;
+}
+
+.resume_left{
+    width: 35%;
+    background: #26252d;
+}
+
+.resume_image img{
+    width: 100%;
+}
+
+.resume_title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.resume_info{
+    color: #84838b;
+}
+
+.resume_bottom{
+    padding: 20px 30px;
+}
+
+.resume_item{
+    padding: 20px 0;
+    border-bottom: 1px solid #0175b2;
+}
+
+.resume_item:last-child{
+    border-bottom: 0;
+}
+
+.resume_wrapper .resume_left .resume_namerole{
+    display: none;
+}
+
+.resume_wrapper .resume_namerole .name{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+
+.resume_subtitle{
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.resume_subinfo {
+    margin-bottom: 10px;
+}
+
+.resume_right{
+    width: 65%;
+    padding: 15px 40px;
+    color: #26252d;
+}
+
+.resume_right .resume_namerole .name{
+    color: #26252d;
+    font-size: 32px;
+}
+
+.role{
+    padding-left: 228px;
+    padding-top: 3px;
+    text-transform: uppercase;
+}
+
+.resume_right .resume_title{
+    color: #26252d;
+}
+/* Table */
+.table {
+    font-family: sans-serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: lightgrey;
+    color: black;
+    border: 10px solid lightgrey;
+    border-radius: 20px;
+}
+
+th {
+    font-size: 16px;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Img Portfolio */
+*:after {box-sizing: border-box;}
+.shadow-border {
+    width: 300px;
+    margin: 30px auto 0;
+    position: relative;
+    float: left;
+}
+.shadow-border:after {
+    content:"";
+    width: 100%;
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    border: 3px solid #0175b2;
+}
+.shadow-border img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
