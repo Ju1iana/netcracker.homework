@@ -32,6 +32,8 @@ HashSet vs LinkedHashSet vs TreeSet:
 | remove (end)     | ` winner` |        normal | loser   |
 | remove all       |  normal   |     ` winner` | loser   |
 
+![]()
+
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW4_Collections/src/u/pankratova/resources/b1.png)
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW4_Collections/src/u/pankratova/resources/b2.png)
 
@@ -53,6 +55,7 @@ HashMap vs LinkedHashMap vs TreeMap:
 | remove (middle)  |   normal   |      `winner` | loser   |
 | remove (end)     | ` winner`  |        normal | loser   |
 
+![]()
 
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW4_Collections/src/u/pankratova/resources/c1.png)
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW4_Collections/src/u/pankratova/resources/c2.png)
