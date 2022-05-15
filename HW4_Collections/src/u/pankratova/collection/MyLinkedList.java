@@ -37,13 +37,6 @@ public class MyLinkedList<E> implements ILinkedList<E> {
         }
     }
 
-   /* public void addFirst(E e) {
-    }
-
-
-    public void addLast(E e) {
-    }*/
-
     void linkBefore(E element, Node<E> succ) {
         final Node<E> pred = succ.prevNode;
         final Node<E> newNode = new Node<>(pred, element, succ);
