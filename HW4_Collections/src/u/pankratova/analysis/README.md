@@ -3,7 +3,7 @@ ArrayList vs LinkedList:
 
 
 | operation        |      ArrayList       |            LinkedList |
-|------------------|:--------------------:|----------------------:|
+|------------------|:--------------------:|:----------------------:|
 | add              |        loser         |             ` winner` |
 | set              |      ` winner`       |                 loser |
 | remove (start)   |        loser         |              `winner` |
@@ -25,7 +25,7 @@ HashSet vs LinkedHashSet vs TreeSet:
 ---
 
 | operation        |  HashSet  | LinkedHashSet | TreeSet |
-|------------------|:---------:|--------------:|:--------|
+|------------------|:---------:|:--------------:|:--------|
 | add              |  normal   |     ` winner` | loser   |
 | remove (start)   |  normal   |      `winner` | loser   |
 | remove (middle)  |  normal   |      `winner` | loser   |
@@ -49,7 +49,7 @@ HashMap vs LinkedHashMap vs TreeMap:
 ---
 
 | operation        |  HashMap   | LinkedHashMap | TreeMap |
-|------------------|:----------:|:--------------:|:--------|
+|------------------|:----------:|:--------------:|:--------:|
 | add              |  `winner`  |        normal | loser   |
 | remove (start)   |   normal   |      `winner` | loser   |
 | remove (middle)  |   normal   |      `winner` | loser   |
