@@ -49,7 +49,7 @@ HashMap vs LinkedHashMap vs TreeMap:
 ---
 
 | operation        |  HashMap   | LinkedHashMap | TreeMap |
-|------------------|:----------:|--------------:|:--------|
+|------------------|:----------:|:--------------:|:--------|
 | add              |  `winner`  |        normal | loser   |
 | remove (start)   |   normal   |      `winner` | loser   |
 | remove (middle)  |   normal   |      `winner` | loser   |
