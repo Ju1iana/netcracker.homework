@@ -69,4 +69,4 @@ Conclusion:
 
 <hr>
 
-*Some calculations were performed using nanoTime() for a more accurate calculation*
+*Some calculations were performed using nanoTime() for a more accurate calculation.*
