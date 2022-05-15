@@ -2,7 +2,6 @@ package u.pankratova.collection;
 
 import java.lang.reflect.Array;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 public class MyLinkedList<E> implements ILinkedList<E> {
