@@ -10,8 +10,9 @@ In the diagram we see the total time spent on this.
 
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW4_Collections/src/u/pankratova/resources/Compare.png)
 
-## Conclusion 
-After implementing the basic operations of our MyLinkedList and LinkedList classes, we can 
-clearly see that LinkedList works a little faster than MyLinkedList.
+Conclusion
+----
+        After implementing the basic operations of our MyLinkedList and LinkedList classes, we can 
+        clearly see that LinkedList works a little faster than MyLinkedList.
 
 <hr>
