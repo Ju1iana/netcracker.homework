@@ -1,0 +1,114 @@
+body {
+    background: #eee;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+input[type='button'] {
+    background: #009f00;
+    border: none;
+    padding: 10px 35px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 6px;
+}
+
+input[type='button']:hover {
+    opacity: 0.7;
+}
+
+input[type='reset'] {
+    background: firebrick;
+    border: none;
+    padding: 10px 35px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 6px;
+}
+
+input[type='reset']:hover {
+    opacity: 0.7;
+}
+
+#error {
+    display: none;
+    color: red;
+}
+
+table {
+    table-layout: auto;
+    width: 90%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+body {
+    font-size: 18px;
+}
+
+
+thead th:nth-child(1) {
+    width: 12%;
+}
+
+thead th:nth-child(2) {
+    width: 5%;
+}
+
+thead th:nth-child(3) {
+    width: 10%;
+}
+
+th, td {
+    padding: 15px;
+    letter-spacing: 2px;
+}
+
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead, tfoot {
+    color: white;
+    text-shadow: 3px 5px 1px black;
+}
+
+thead th, tfoot th, tfoot td {
+    background: #3b4d61;
+    border: 3px solid black;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+label {
+    display: none;
+}
+
+#myTable {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#myTable tbody tr {
+    border-bottom: 1px solid black;
+}
+
+form {
+    font-size: 26px;
+}
+
+tr:nth-child(even) {
+    background-color: #6b7b8c;
+}
+
+#dest.tr:hover {
+    transition-duration: 10s;
+}
+
+tr:hover {
+    background-color: #5c6588;
+}

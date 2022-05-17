@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solving the quadratic equation</title>
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<h2>Calculation of the quadratic equation</h2>
+<p> A quadratic equation is an algebraic equation of the second degree in x.
+<p>The quadratic equation in its standard form is <b>ax&sup2 + bx + c = 0</b>. </p>
+<p>Where <b>a</b> and <b>b</b> are the coefficients, <b>x</b> is the variable, and <b>c</b> is the constant term and <b>a
+    ≠ 0.</b></p>
+
+<form name="form1">
+    <input name="a" style="font-size: 25px" type="text" size="2" placeholder="a">&middot x&sup2 +
+    <input name="b" style="font-size: 25px" type="text" size="2" placeholder="b">&middot x +
+    <input name="c" style="font-size: 25px" type="text" size="2" placeholder="c"> = 0
+    <br><br>
+
+    <label><input type="text" id="equation"></label>
+    <label><input type="text" id="discriminant" class="d"> </label>
+    <label><input id="x1" size="2" type="text"></label>
+    <label><input id="x2" size="2" type="text"></label>
+
+    <form>
+        <input type="button" onclick="sol();" value="solve">
+        <input type="reset" value="reset">
+        <p>If you want to <b>delete</b> a line, just click on it. </p>
+        <p id="smth"></p>
+        <p id="error"></p>
+    </form>
+    <div>
+        <table id="myTable">
+            <thead>
+            <tr>
+                <th>equation</th>
+                <th>discriminant</th>
+                <th colspan="2">roots</th>
+            </tr>
+            </thead>
+            <tbody id="dest">
+            </tbody>
+        </table>
+    </div>
+</form>
+<script src="../js/script.js"></script>
+</body>
+</html>
