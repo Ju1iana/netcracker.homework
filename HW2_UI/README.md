@@ -9,4 +9,4 @@ Calculation of the quadratic equation
 First attempt
 ---
 
-![]()
+![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW2_UI/resources/one.png)
