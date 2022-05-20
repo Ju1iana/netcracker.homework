@@ -4,21 +4,20 @@ Tasks on the topic - parameterization, Java collections
 
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW4_Collections/src/u/pankratova/resources/collections.png)
 ---
+The MyLinkedList class implements the ILinkedList interface, which contains a description of the basic operations for working with a linked list. These operations are completely similar to the operations in the Java implementation. The description can be found in the Java documentation (https://docs.oracle.com/javase/8/docs/api/java/util/List.html )
+Detailed information about the linked lists can be found on the Internet.
+We think over the implementation of the MyLinkedList class on our own. You can enter any auxiliary variables and methods at your discretion. As an implementation of the iterator behavior, we use the Java interface - https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
+We create iterator objects by any means known to you. For example, you can create a separate class implementing the Iterator interface, you can create a factory, you can provide an anonymous iterator implementation, etc.
+We test all operations in the MainClass class. We add the main method to the specified class and test all operations in it. The nodes contain objects of any type. You can use classes from previous tasks. For example, Circle, MyTriangle, etc.
+It will also be interesting to compare the performance of the collection you wrote with the Java implementation. :) To do this, you need to create objects MyLinkedList and java.util.LinkedList. Estimate the approximate execution time of the main operations – adding, searching, deleting an element. To change the execution time, you can use the Duration class (read more https://www.baeldung.com/java-measure-elapsed-time ). We select the number of items in the collection ourselves.
 
-Класс MyLinkedList реализует интерфейс ILinkedList, содержащий в себе описание основных операций, для работы со связным списком. Данные операции полностью аналогичны, операциями в Java реализации. Описание можно посмотреть в Java документации (https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
-Подробную информацию о связных списках можно найти на просторах интернета.
-Реализацию класса MyLinkedList продумываем самостоятельно. Можно вводить любые вспомогательные переменные и методы на ваше усмотрение. В качестве реализации поведения итератора используем Java интерфейс - https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
-Создаём объекты итератора любыми известными вам способами. Например, можно создать отдельный класс, реализующий интерфейс Iterator, можно создать фабрику, можно предоставить анонимную реализацию итератора и т.д.
-Тестируем все операции в классе MainClass. В указанный класс добавляем метод main и тестируем в нём все операции. В узлах располагаются объекты любого типа. Можно использовать классы из предыдущих заданий. Например, Circle, MyTriangle и т.д.
-Также будет интересно сравнить производительность, написанной вами коллекции, с Java реализацией.:) Для этого необходимо создать объекты MyLinkedList и java.util.LinkedList. Оценить примерное время выполнения основных операций – добавления, поиска, удаления элемента. Для изменения времени выполнения можно воспользоваться Duration классом (подробнее https://www.baeldung.com/java-measure-elapsed-time). Количество элементов в коллекции подбираем самостоятельно.
-
-2. Сравнительный анализ производительности основных Java коллекций.
-   Написать тестовый класс, измеряющий время выполнения основных операций – добавление, вставка, удаление элементов
-   a.	Сравнить производительность ArrayList и LinkedList для основных операций
-   b.	Сравнить производительность HashSet, LinkedHashSet, TreeSet для основных операций
-   c.	Сравнить производительность HashMap, LinkedHashMap, TreeMap
+2. Comparative analysis of the performance of the main Java collections.
+   Write a test class that measures the execution time of basic operations – adding, inserting, deleting elements
+a. Compare the performance of ArrayList and LinkedList for basic operations
+b. Compare the performance of HashSet, LinkedHashSet, TreeSet for basic operations
+c. Compare the performance of HashMap, LinkedHashMap, TreeMap
 ---
 
-Размер, тип, количество тестовых данных выбираем самостоятельно.
-На основании полученных вами результатов пришлёте мне вместе с кодом, выводы :)
-В выводе необходимо указать в каких случаях удобно использовать ту или иную коллекцию (для каждого из пунктов a,b,c) 
+We choose the size, type, and number of test data ourselves.
+Based on the results you have received, you will send me the conclusions along with the code :)
+In the output, it is necessary to specify in which cases it is convenient to use a particular collection (for each of the items a,b,c)
