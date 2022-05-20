@@ -12,7 +12,7 @@ We test all operations in the MainClass class. We add the main method to the spe
 It will also be interesting to compare the performance of the collection you wrote with the Java implementation. :) To do this, you need to create objects MyLinkedList and java.util.LinkedList. Estimate the approximate execution time of the main operations – adding, searching, deleting an element. To change the execution time, you can use the Duration class (read more https://www.baeldung.com/java-measure-elapsed-time ). We select the number of items in the collection ourselves.
 
          2. Comparative analysis of the performance of the main Java collections.
-          Write a test class that measures the execution time of basic operations – adding, inserting, deleting elements
+         Write a test class that measures the execution time of basic operations – adding, inserting, deleting elements
          a. Compare the performance of ArrayList and LinkedList for basic operations
          b. Compare the performance of HashSet, LinkedHashSet, TreeSet for basic operations
          c. Compare the performance of HashMap, LinkedHashMap, TreeMap
