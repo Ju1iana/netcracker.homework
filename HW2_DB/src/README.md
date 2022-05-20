@@ -1,7 +1,7 @@
 SQL task on PostgreSQL
 ---
 ---
-      Task to work with the database:
+      Task to work with the database: (№1)
 
 1.	Duplicates were mistakenly entered into the subscribers table (customers – “s”). Find them.
       (by first and last name)
@@ -12,7 +12,7 @@ SQL task on PostgreSQL
 
 For testing, it is necessary to prepare and show the appropriate test data set.
 
-      Design assignment:
+      Design assignment:  (№2)
 It is required to design a database according to the above requirements.
 The answer should be an SQL script.
 
