@@ -1,4 +1,4 @@
-SQL task on PostgreSQL
+SQL task on PostgreSQL:
 ---
 ---
       Task to work with the database: (№1)
