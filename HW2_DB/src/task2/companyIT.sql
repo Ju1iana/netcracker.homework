@@ -19,8 +19,7 @@ CREATE TABLE employees
     employee_code INTEGER PRIMARY KEY,
     first_name    VARCHAR(15) NOT NULL,
     last_name     VARCHAR(15) NOT NULL,
-    gender        VARCHAR(1) CONSTRAINT gender_selection
-        CHECK(gender = 'm' OR gender = 'f'),
+    gender        VARCHAR(1) CONSTRAINT gender_selection CHECK(gender = 'm' OR gender = 'f'),
     age           INTEGER CONSTRAINT age_adult CHECK(age > 18),
     salary        INTEGER CONSTRAINT salary_not_null CHECK(salary > 0),
 
