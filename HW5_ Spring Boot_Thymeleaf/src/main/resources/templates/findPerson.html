@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Find person</title>
+    <link type="text/css" rel="stylesheet" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
+</head>
+<body>
+<p><h1>Find person</h1></p>
+<hr>
+
+<form action="#" th:action="@{/findPerson}" th:object="${person}" method="post">
+
+    <p> Surname: <input type="text" th:field="*{surname}" required="true" placeholder="Surname" pattern="[A-Za-z]{1,15}"/></p>
+    <p class="note"> Surname must be lowercase or uppercase and 1-15 characters in length.</p>
+
+    <p> Name:    <input type="text" th:field="*{name}" required="true" placeholder="Name" pattern="[A-Za-z]{1,12}" /></p>
+    <p class="note"> Name must be lowercase or uppercase and 1-12 characters in length.</p>
+
+    <p><input type="submit" value="Find" /> <input type="reset" value="Reset" /></p>
+</form>
+<a href="/addPerson">Add another person</a>
+</body>
+
+</html>

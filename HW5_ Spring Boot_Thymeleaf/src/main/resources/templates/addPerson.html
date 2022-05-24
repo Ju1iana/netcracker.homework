@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Add person</title>
+    <link type="text/css" rel="stylesheet" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
+
+</head>
+<body>
+<p>
+<h1>Add person</h1></p>
+<hr>
+
+<form action="#" th:action="@{/addPerson}" th:object="${person}" method="post">
+    <p> Surname: <input type="text" th:field="*{surname}" required="true" placeholder="Surname"
+                        pattern="[A-Za-z]{1,15}"/></p>
+    <p class="note"> Surname must be lowercase or uppercase and 1-15 characters in length.</p>
+
+    <p> Name: <input type="text" th:field="*{name}" required="true" placeholder="Name" pattern="[A-Za-z]{1,12}"/></p>
+    <p class="note"> Name must be lowercase or uppercase and 1-12 characters in length.</p>
+
+    <p> Patronymic: <input type="text" th:field="*{patronymic}" required="true" placeholder="Patronymic"
+                           pattern="[A-Za-z]{1,15}"></p>
+    <p class="note"> Patronymic must be lowercase or uppercase and 1-15 characters in length.</p>
+
+    <p> Age: <input type="number" th:field="*{age}" required="true" placeholder="Age" pattern="^[ 0-9]+$" min="0"
+                    max="120"></p>
+    <p class="note"> Age must be 0-120 characters in length.</p>
+
+    <p> Salary: <input type="number" th:field="*{salary}" required="true" placeholder="Salary" pattern="^[ 0-9]+$"></p>
+    <p class="note"> The salary should be what you want. There is no limit to dreams.</p>
+
+    <p> Email: <input type="email" th:field="*{email}" required="true" placeholder="Email"></p>
+    <p class="note"> It's just an email. Don't forget about @.</p>
+
+    <p> Job: <input type="text" th:field="*{job}" required="true" placeholder="Job" pattern="[A-Za-z] + ^[ 0-9]+${0,8}">
+    </p>
+
+    <p><input type="submit" value="Add" class="but"/> <input type="reset" value="Reset" class="but"/>
+
+    <p><a href="/findPerson">Do you want to find a person:?</a></p>
+</form>
+
+<form action="#" th:action="@{/sendmail}" method="get">
+    <p><input type="submit" class="but" value="Send Email"/></p>
+</form>
+<hr>
+<form method="POST" enctype="multipart/form-data"
+      action="/upload" accept=".csv">
+    File to upload: <input type="file" name="file"><br> <br/> <input type="submit"
+                                                                     value="Upload file">
+</form>
+<hr>
+
+</body>
+</html>

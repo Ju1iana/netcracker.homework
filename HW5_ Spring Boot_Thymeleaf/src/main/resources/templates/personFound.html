@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Find person</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}"></head>
+<body>
+<h2>Found person: </h2>
+<hr>
+<p th:text="'Surname: ' + ${person.surname}"></p>
+<p th:text="'Name: ' + ${person.name}"></p>
+<p th:text="'Patronymic: ' + ${person.patronymic}"></p>
+<p th:text="'age: ' + ${person.age}"></p>
+<p th:text="'salary: ' + ${person.salary}"></p>
+<p th:text="'email: ' + ${person.email}"></p>
+<p th:text="'job: ' + ${person.job}"></p>
+<br>
+<a href="/addPerson">Add another person</a>
+<br>
+<a href="/findPerson">Find another person</a>
+<br>
+<br>
+<p th:text="'Date/time: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></p>
+<span th:text="'User-agent: ' + ${#httpServletRequest.getHeader('User-Agent')}"></span>
+
+<form action="#" th:action="@{/sendmail}" method="get">
+    <p><input type="submit" value="Send Email" /></p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Mail Sender</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link type="text/css" rel="stylesheet" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
+</head>
+<body>
+<h1>Send Email</h1>
+<hr>
+<form action="#" th:action="@{/sendmail}" th:object="${mailObject}" method="post">
+  <p>To: <input type="text" name="recipient" placeholder="recipient" th:field="*{to}" required="true"/></p>
+  <p><textarea rows="10" cols="60" th:field="*{text}" name="text" placeholder="Text message..." autofocus></textarea></p>
+  <p><input type="submit" value="Send" /></p>
+</form>
+
+<p><a href="/addPerson">Add person</a></p>
+<a href="/findPerson">Find person</a>
+</body>
+</html>
