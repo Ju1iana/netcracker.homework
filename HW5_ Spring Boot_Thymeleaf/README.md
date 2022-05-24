@@ -24,3 +24,4 @@ Task:
 
     A new file uploaded from outside:
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW5_%20Spring%20Boot_Thymeleaf/src/main/resources/image/2.png)
+---
