@@ -6,6 +6,7 @@ Task:
 3. Provide the possibility of obtaining data about the user by last name and first name. If the user is found, then in addition to the output information, add the current time and the name of the browser (user-agent) from which the request was made. If there is no such user in the file, then redirect to the page with the message that the user has not been found. Or return the appropriate status code for this case (see HTTP protocol RFC document) using the ResponseEntity entity.
 4. Implement the ability to download user data from an external file (file upload).
 
+---
 
     Home page:
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW5_%20Spring%20Boot_Thymeleaf/src/main/resources/image/homepage.png)
@@ -24,4 +25,5 @@ Task:
 
     A new file uploaded from outside:
 ![](https://github.com/Ju1iana/netcracker.homework/blob/main/HW5_%20Spring%20Boot_Thymeleaf/src/main/resources/image/2.png)
+
 ---
