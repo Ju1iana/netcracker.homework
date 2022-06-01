@@ -23,8 +23,8 @@ Create and fill in the specified tables using one of the DBMS. For example, Post
 | order_id | order_date | order_seller | order_buyer | order_book | order_quantity | order_sum |
 |:--------:|:----------:|:------------:|:-----------:|:----------:|:--------------:|:---------:|
 
-
 ---
+
 **Using the Spring Boot framework to implement a Java application that provides the following REST API:**
 
 **1. Implement basic CRUD operations. For each of the tables, it is necessary to provide the possibility of** 
