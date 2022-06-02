@@ -3,7 +3,7 @@ Spring Boot Data + REST + Swagger UI
 Create and fill in the specified tables using one of the DBMS. For example, PostgreSQL. Come up with test data for the tables yourself. Choose the data type yourself.
 ---
 
-1. Buyer
+1. Buyers
 
 | buyer_id | buyer_surname | buyer_location | buyer_discount |
 |:--------:|:-------------:|:--------------:|:--------------:|
