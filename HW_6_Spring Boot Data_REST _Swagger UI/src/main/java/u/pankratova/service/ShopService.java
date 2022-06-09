@@ -55,13 +55,13 @@ public class ShopService {
     }
 
     // 3.2
-    public List<Object> shopNames(){
-        return repository.shopNames();
+    public List<String> shopNames(String d1, String d2){
+        return repository.shopNames(d1, d2);
     }
 
     // 5.3
-    public List<Object> between10and15(){
-        return repository.between10and15();
+    public List<Object> betweenFromAndTo(String district, int from, int to){
+        return repository.betweenFromAndTo(district, from, to);
     }
 
 }

@@ -2,6 +2,7 @@ package u.pankratova.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import u.pankratova.model.Order;
 
@@ -14,7 +15,7 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 
     // 2.3
     @Query(value = "select distinct to_char(order_date, 'Month') from orders", nativeQuery = true)
-    List<Object> differentMonths();
+    List<String> differentMonths();
 
     // 4.1
     @Query(value =
@@ -34,8 +35,8 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
     @Query(value =
             "SELECT o.order_id, b.buyer_surname, o.order_date\n" +
                     "FROM orders o JOIN buyers b ON (b.buyer_id = o.order_buyer)\n" +
-                    "WHERE o.order_sum >= 60000", nativeQuery = true)
-    List<Object> soldMoreThan60000();
+                    "WHERE o.order_sum >= :sum", nativeQuery = true)
+    List<Object> soldMoreThanSmth(@Param(value = "sum") double sum);
 
     // 5.2
     @Query(value =
@@ -44,9 +45,9 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
             "            WHERE o.order_buyer = b.buyer_id\n" +
             "                AND o.order_seller = s.shop_id\n" +
             "                AND s.shop_location = b.buyer_location\n" +
-            "                AND o.order_date >= '2022-04-01'\n" +
+            "                AND EXTRACT(MONTH FROM o.order_date) < :months\n" +
             "        ORDER BY o.order_date", nativeQuery = true)
-    List<Object> theSameDistrict();
+    List<Object> earlierMonths(@Param(value = "months") int months);
 }
 
 

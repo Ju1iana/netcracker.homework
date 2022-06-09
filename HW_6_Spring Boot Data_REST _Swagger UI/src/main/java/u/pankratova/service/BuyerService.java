@@ -48,7 +48,7 @@ public class BuyerService {
     }
 
     // 2.2
-    public List<Object> differentDistricts(){
+    public List<String> differentDistricts(){
         return repository.differentDistricts();
     }
 }

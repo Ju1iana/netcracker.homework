@@ -2,6 +2,7 @@ package u.pankratova.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import u.pankratova.model.Book;
 
@@ -21,9 +22,9 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Query(value =
             "SELECT book_name, book_cost\n" +
             "FROM books\n" +
-            "WHERE ((book_name LIKE '%Windows%') OR (book_cost > 20000))\n" +
+            "WHERE ((book_name LIKE %:name%) OR (book_cost > :sum))\n" +
             "ORDER BY book_name, book_cost", nativeQuery = true)
-    List<Object> windowsOrPrice();
+    List<String> nameAndCostMoreSum(@Param("name") String name, @Param("sum") double sum);
 
     // 5.4
     @Query(value =
@@ -32,7 +33,7 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
             "              JOIN shops s ON (s.shop_id = o.order_seller)\n" +
             "WHERE\n" +
             "      bo.book_warehouse = s.shop_location AND\n" +
-            "      bo.book_quantity > 10\n" +
+            "      bo.book_quantity > :stuff\n" +
             "ORDER BY bo.book_cost", nativeQuery = true)
-    List<Object> dataOfBooks();
+    List<Object> dataOfBooks(@Param("stuff") int stuff);
 }

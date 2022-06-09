@@ -65,17 +65,20 @@ public class ShopController {
     // 3.2
     @Operation(summary = "Shop names of different districts")
     @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/shopNames")
-    public List<Object> shopNames(){
-        return shopService.shopNames();
+    @GetMapping("/shopNames/{district1}/{district2}")
+    public List<String> shopNames(@PathVariable String district1,
+                                  @PathVariable String district2){
+        return shopService.shopNames(district1, district2);
     }
 
     // 5.3
-    @Operation(summary = "Shops located in any district, except Avtozavodsky and buyers with a discount of 10-15%")
+    @Operation(summary = "Shops located in any district, except ... and buyers with a discount of ...%-...%")
     @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("between10and15")
-    public List<Object> between10and15(){
-        return shopService.between10and15();
+    @GetMapping("betweenFromAndTo/{district}/{from}/{to}")
+    public List<Object> betweenFromAndTo(@PathVariable String district,
+                                         @PathVariable int from,
+                                         @PathVariable int to){
+        return shopService.betweenFromAndTo(district, from, to);
     }
 
 }

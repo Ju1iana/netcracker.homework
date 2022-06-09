@@ -71,19 +71,20 @@ public class BookController {
     }
 
     // 3.3
-    @Operation(summary = "Get books with 'Windows' or the price is more than 20000")
+    @Operation(summary = "Get books by name OR cost more than sum")
     @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/windowsOrPrice")
-    public List<Object> windowsOrPrice(){
-        return bookService.windowsOrPrice();
+    @GetMapping("/nameOrCostMoreSum/{name}/{sum})")
+    public List<String> nameAndCostMoreSum(@PathVariable(value = "name") String name,
+                                           @PathVariable(value = "sum") double sum){
+        return bookService.nameAndCostMoreSum(name, sum);
     }
 
     // 5.4
-    @Operation(summary = "Data on the purchase of books")
+    @Operation(summary = "Data on the purchase of books and contained in stock more than ... pieces")
     @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/dataOfBooks")
-    public List<Object> dataOfBooks(){
-        return bookService.dateOfBooks();
+    @GetMapping("/dataOfBooks{stuff}")
+    public List<Object> dataOfBooks(@PathVariable(value = "stuff") int stuff){
+        return bookService.dateOfBooks(stuff);
     }
 
 }

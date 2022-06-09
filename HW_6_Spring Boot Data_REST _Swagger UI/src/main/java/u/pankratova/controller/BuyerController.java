@@ -67,7 +67,7 @@ public class BuyerController {
     @Operation(summary = "Get all different districts where buyers live")
     @ResponseStatus(code = HttpStatus.OK)
     @GetMapping("/differentDistricts")
-    public List<Object> differentDistricts(){
+    public List<String> differentDistricts(){
         return buyerService.differentDistricts();
     }
 }

@@ -58,13 +58,13 @@ public class BookService {
     }
 
     // 3.3
-    public List<Object> windowsOrPrice(){
-        return repository.windowsOrPrice();
+    public List<String> nameAndCostMoreSum(String name, double cost){
+        return repository.nameAndCostMoreSum(name, cost);
     }
 
     // 5.4
-    public List<Object> dateOfBooks(){
-        return repository.dataOfBooks();
+    public List<Object> dateOfBooks(int stuff){
+        return repository.dataOfBooks(stuff);
     }
 
 

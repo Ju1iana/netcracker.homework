@@ -93,7 +93,7 @@ public class OrderService {
     }
 
     // 2.3
-    public List<Object> differentMonths() {
+    public List<String> differentMonths() {
         return repository.differentMonths();
     }
 
@@ -108,12 +108,12 @@ public class OrderService {
     }
 
     // 5.1
-    public List<Object> soldMoreThan60000(){
-        return repository.soldMoreThan60000();
+    public List<Object> soldMoreThanSmth(double sum){
+        return repository.soldMoreThanSmth(sum);
     }
 
     // 5.2
-    public List<Object> theSameDistrict(){
-        return repository.theSameDistrict();
+    public List<Object> earlierMonths(int months){
+        return repository.earlierMonths(months);
     }
 }

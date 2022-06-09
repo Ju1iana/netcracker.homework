@@ -16,5 +16,5 @@ public interface BuyerRepository extends JpaRepository<Buyer, Integer> {
 
     // 2.2
     @Query(value = "SELECT DISTINCT buyer_location FROM buyers", nativeQuery = true)
-    List<Object> differentDistricts();
+    List<String> differentDistricts();
 }

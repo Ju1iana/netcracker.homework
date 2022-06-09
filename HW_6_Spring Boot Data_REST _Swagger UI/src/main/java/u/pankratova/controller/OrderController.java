@@ -66,7 +66,7 @@ public class OrderController {
     @Operation(summary = "Get different months")
     @ResponseStatus(code = HttpStatus.OK)
     @GetMapping("/differentMonths")
-    public List<Object> differentMonths() {
+    public List<String> differentMonths() {
         return orderService.differentMonths();
     }
 
@@ -87,19 +87,19 @@ public class OrderController {
     }
 
     // 5.1
-    @Operation(summary = "The order number, the name of the buyer and the date of purchases in which books were sold for an amount not less than 60,000 rubles.")
+    @Operation(summary = "The order number, the name of the buyer and the date of purchase in which the books were sold in the amount of at least some rubles")
     @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/soldMoreThan60000")
-    public List<Object> soldMoreThan60000() {
-        return orderService.soldMoreThan60000();
+    @GetMapping("/soldMoreThanSmth/{sum}")
+    public List<Object> soldMoreThanSmth(@PathVariable double sum) {
+        return orderService.soldMoreThanSmth(sum);
     }
 
     // 5.2
-    @Operation(summary = "Purchases made by the buyer in his area no earlier than March")
+    @Operation(summary = "Purchases made by the buyer in their district not earlier ... months")
     @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/theSameDistrict")
-    public List<Object> theSameDistrict() {
-        return orderService.theSameDistrict();
+    @GetMapping("/earlierMonths{months}")
+    public List<Object> earlierMonths(@PathVariable int months) {
+        return orderService.earlierMonths(months);
     }
 
 }
